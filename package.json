@@ -1,0 +1,14 @@
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "Portal de Notícias - Projeto utilizado no curso de NodeJS da Udemy.",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danilo Domingos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
