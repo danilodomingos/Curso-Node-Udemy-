@@ -1,12 +1,14 @@
 var express = require("express");
 var app = express();
 
+app.set('view engine', 'ejs');
+
 app.get("/", (req, res)=>{
-    res.send("<html><body>Portal de notícias.</body></html>");
+    res.render("index");
 });
 
 app.get("/tecnologia", (req, res)=>{
-    res.send("<html><body>Notícias de Tecnologia.</body></html>");
+    res.render("secao/tecnologia");
 });
 
 app.listen(3000, () => {
