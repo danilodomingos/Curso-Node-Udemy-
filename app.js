@@ -1,16 +1,14 @@
 let app = require("./config/server");
 
-app.get("/", (req, res)=>{
-    res.render("home/index");
-});
+let rotaNoticias = require('./app/routes/noticias')(app);
+let rotaHome = require('./app/routes/home')(app);
+let rotaInclusaoNoticias 
+    = require('./app/routes/formulario_inclusao_noticia')(app);
 
-app.get("/formulario-inclusao-noticia", (req, res)=>{
-    res.render("admin/form_add_noticia");
-});
 
-app.get("/noticias", (req, res)=>{
-    res.render("noticias/noticias");
-});
+
+
+
 
 app.get("/tecnologia", (req, res)=>{
     res.render("secao/tecnologia");
