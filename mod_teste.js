@@ -1,0 +1,1 @@
+module.exports = ()=> "Este módulo contém apenas umas string";
