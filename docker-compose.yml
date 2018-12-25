@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  curso_node:
+    image: curso-node-udemy
+    container_name: curso-node
+    build:
+      context: ./
+    ports:
+      - "3001:3000"
+    volumes:
+      - ".:/var/app"
+    depends_on: [mysql_dev]
+  
+  mysql_dev:
+    image: mysql:5.7.22
+    container_name: bd-curso-node
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: portal_noticias
+    ports: 
+      - "3308:3306"
+    volumes:
+      - "./database/my.conf:/etc/mysql/conf.d/config-file.cnf"
+      - "./database/Data:/var/lib/mysql:rw"
