@@ -71,4 +71,4 @@ RUN npm install -g nodemon
 EXPOSE 3000
 WORKDIR /var/app
 
-CMD [ "/bin/sh"]
+ENTRYPOINT [ "/bin/sh"]
