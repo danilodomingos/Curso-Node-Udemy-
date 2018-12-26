@@ -4,4 +4,3 @@ module.exports = (app) => {
         res.render("home/index");
     });
 }
-
