@@ -5,8 +5,14 @@
 			<title>Formulário de cadastro de Notícia</title>
 		</head>
 	<body>
+		<h1>Adicionar notícia</h1><br/>
 
-		<h1>Adicionar notícia</h1>
-
+		<form action="/noticias/salvar" method="POST">
+			<label>Título</label>
+			<input type="text" id="titulo" name="titulo" placeholder="Título da Notícia"/><br/>
+			<label>Notícia</label>
+			<textarea id="noticia" name="noticia" rows="5" cols="30">
+			<textarea/><br/>
+			<input type="submit" value="Enviar"/>
 	</body>
 </html>
